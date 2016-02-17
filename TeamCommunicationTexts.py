@@ -21,6 +21,7 @@ def get_text_explanation():
         txt += trans_TC(u"The chat window allows you to communicate freely for {} "
                    u"minutes with other group players.".format(
                         pms.TEMPS_PARTIE.minute))
+    return txt
 
 
 # ECRAN RECAPITULATIF ==========================================================
