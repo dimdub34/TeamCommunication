@@ -86,7 +86,7 @@ class RemoteTC(IRemote):
         if self._le2mclt.simulation:
             rep = {"TC_confidence": random.randint(0, nbanswers),
                    "TC_jobsatisfaction": random.randint(0, 7)}
-            if pms.TREATMENT == pms.get_treatement("avec_communication"):
+            if pms.TREATMENT == pms.get_treatment("avec_communication"):
                 rep["TC_infosatisfaction"] = random.randint(0, 7)
             logger.info(u"{} renvoi {}".format(self._le2mclt.uid, rep))
             return rep

@@ -158,7 +158,7 @@ class GuiDecision(QtGui.QDialog):
         hlayout.addWidget(self.widchat)
         layout.addLayout(hlayout)
 
-        if pms.TREATMENT == pms.get_treatement("sans_communication"):
+        if pms.TREATMENT == pms.get_treatment("sans_communication"):
             self.widchat.setVisible(False)
 
         if self._automatique:
@@ -190,7 +190,7 @@ class GuiDecision(QtGui.QDialog):
             except Exception as e:
                 logger.error(e.message)
 
-        if pms.TREATMENT == pms.get_treatement("avec_communication"):
+        if pms.TREATMENT == pms.get_treatment("avec_communication"):
             if random.random() >= 0.60:  # on envoit un message
                 self.widchat.write(u"Message automatique")
                 self.widchat.ui.pushButton.click()
@@ -336,7 +336,7 @@ class DAdditionnalquestions(QtGui.QDialog):
             parent=self)
         layout.addWidget(self._widanswers)
 
-        if pms.TREATMENT == pms.get_treatement("avec_communication"):
+        if pms.TREATMENT == pms.get_treatment("avec_communication"):
             self._widinfosatisfaction = WSlider(
                 label=texts_TC.get_text_infosatisfaction(),
                 minimum=1, maximum=7, automatique=self._automatique,
@@ -373,7 +373,7 @@ class DAdditionnalquestions(QtGui.QDialog):
             pass
         rep = {"TC_confidence": self._widanswers.get_value(),
                "TC_jobsatisfaction": self._widjobsatisfaction.get_value()}
-        if pms.TREATMENT == pms.get_treatement("avec_communication"):
+        if pms.TREATMENT == pms.get_treatment("avec_communication"):
             rep["TC_infosatisfaction"] = self._widinfosatisfaction.get_value()
         if not self._automatique:
             confirm = QtGui.QMessageBox.question(

@@ -71,7 +71,7 @@ class Serveur(object):
             pms.TEMPS_PARTIE, pms.TREATMENT, pms.GRILLES = dconfig.get_config()
             self._le2mserv.gestionnaire_graphique.infoserv(
                 [trans_TC(u"Part time: {}").format(pms.TEMPS_PARTIE),
-                 trans_TC(u"Treatment: {}").format(pms.get_treatement(pms.TREATMENT)),
+                 trans_TC(u"Treatment: {}").format(pms.get_treatment(pms.TREATMENT)),
                  trans_TC(u"Grids: {}").format(len(pms.GRILLES))])
 
     @defer.inlineCallbacks

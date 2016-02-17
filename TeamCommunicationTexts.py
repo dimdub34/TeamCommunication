@@ -1,11 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Ce module contient les textes des écrans
+This module contains the texts for the screens
 """
-__author__ = "Dimitri DUBOIS"
-
-
-from collections import namedtuple
 from util.utiltools import get_pluriel
 import TeamCommunicationParams as pms
 
@@ -15,9 +11,6 @@ import gettext
 localedir = os.path.join(params.getp("PARTSDIR"), "TeamCommunication", "locale")
 trans_TC = gettext.translation(
   "TeamCommunication", localedir, languages=[params.getp("LANG")]).ugettext
-
-
-TITLE_MSG = namedtuple("TITLE_MSG", "titre message")
 
 
 def get_text_explanation():
