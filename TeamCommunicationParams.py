@@ -28,7 +28,7 @@ MONNAIE = u"ecu"
 GRILLES = None  # chargées avec menu configuration de l'appli
 
 
-def get_treatement(code_or_name):
+def get_treatment(code_or_name):
     if type(code_or_name) is int:
         return TREATMENTS.get(code_or_name, None)
     elif type(code_or_name) is str:
