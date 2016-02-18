@@ -24,7 +24,7 @@ TAUX_CONVERSION = 0.6
 NOMBRE_PERIODES = 0
 TAILLE_GROUPES = 4
 GROUPES_CHAQUE_PERIODE = False
-MONNAIE = u"ecu"
+MONNAIE = u"point"
 GRILLES = None  # chargées avec menu configuration de l'appli
 
 

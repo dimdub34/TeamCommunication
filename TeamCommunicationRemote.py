@@ -118,6 +118,8 @@ class RemoteTC(IRemote):
 
     def remote_set_payoffs_TC(self, sequence, in_euros, in_ecus=None):
         self.remote_set_payoffs(in_euros, in_ecus)
+        self._payoff_text = texts_TC.get_payoff_text(
+            self._payoff_euros, self._payoff_ecus)
         self._payoffs[sequence] = {
             "euro": self.payoff_euros, "ecu": self.payoff_ecus,
             "txt": self.payoff_text}

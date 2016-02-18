@@ -62,3 +62,13 @@ def get_text_predictiondictator():
     txt = trans_TC(u"To your opinion, how much was sent, on average, to "
                    u"players B in the current session?")
     return txt
+
+
+def get_payoff_text(pay_euros, pay_ecus=None):
+    if pay_ecus is not None:
+        txt = trans_TC(u"You've earned {} which corresponds to {}.").format(
+            get_pluriel(pay_ecus, pms.MONNAIE), get_pluriel(pay_euros, u"euro"))
+    else:
+        txt = trans_TC(u"You've earned {}.".format(
+            get_pluriel(pay_euros, u"euro")))
+    return txt

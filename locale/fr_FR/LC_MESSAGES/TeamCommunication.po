@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TC\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-17 17:51+0100\n"
-"PO-Revision-Date: 2016-02-17 17:52+0100\n"
+"POT-Creation-Date: 2016-02-18 17:23+0100\n"
+"PO-Revision-Date: 2016-02-18 17:25+0100\n"
 "Last-Translator: Dimitri DUBOIS <dimitri.dubois@umontpellier.fr>\n"
 "Language-Team: Dimitri DUBOIS <dimitri.dubois@umontpellier.fr>\n"
 "Language: fr_FR\n"
@@ -156,7 +156,7 @@ msgstr ""
 "La zone de chat vous permet de communiquer librement avec les autres membres "
 "de votre groupe pendant {} minutes"
 
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationTexts.py:29
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationTexts.py:28
 msgid ""
 "You've found {}.<br />Your group have found a total of {}.<br />Each group "
 "member earns {}."
@@ -164,20 +164,20 @@ msgstr ""
 "Vous avez trouvé {}.<br />Votre groupe a trouvé au total {}.<br />Chaque "
 "membre du groupe gagne {}."
 
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationTexts.py:32
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationTexts.py:34
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationTexts.py:31
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationTexts.py:33
 msgid "good answer"
 msgstr "bonne réponse"
 
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationTexts.py:41
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationTexts.py:40
 msgid "Among your {}, how much to you think are rights?"
 msgstr "Parmi vos {}, combien pensez-vous en avoir de justes?"
 
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationTexts.py:42
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationTexts.py:41
 msgid "answer"
 msgstr "réponse"
 
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationTexts.py:47
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationTexts.py:46
 msgid ""
 "In a scale ranged from 1 (not satisfied at all) to 7 (very satisfied), <br /"
 ">where is your level of satisfaction in regards of <br />the informations "
@@ -187,7 +187,7 @@ msgstr ""
 "<br />où situez-vous votre niveau de satisfaction par rapport<br />aux "
 "informations échangées dans votre groupe?"
 
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationTexts.py:55
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationTexts.py:54
 msgid ""
 "In a scale ranged from 1 (not satisfied at all) to 7 (very satisfied), <br /"
 ">where is you level of satisfaction in regards of the task <br />you "
@@ -197,12 +197,17 @@ msgstr ""
 "<br />où situez-vous votre niveau de satisfaction par rapport<br />aux "
 "informations échangées dans votre groupe?"
 
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationTexts.py:63
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationTexts.py:62
 msgid ""
 "To your opinion, how much was sent, on average, to players B in the current "
 "session?"
 msgstr ""
 "A votre avis, en moyenne  combien a été envoyé aux joueurs B de la session?"
 
-#~ msgid "You've earn {}, that is to say {}."
-#~ msgstr "Vous avez gagné {}, soit {}."
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationTexts.py:69
+msgid "You've earned {} which corresponds to {}."
+msgstr "Vous avez gagné {}, soit {}."
+
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationTexts.py:72
+msgid "You've earned {}."
+msgstr "Vous avez gagné {}."
