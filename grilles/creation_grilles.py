@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-import sys
 import random
 import pickle
 import argparse
+import time
 
 
 def one_or_zero(proba, valeur):
@@ -32,7 +32,8 @@ if __name__ == "__main__":
                         help=u"Set the number of grid to create")
 
     args = parser.parse_args()
+    prefix = time.strftime("%y%m%d%H%M", time.localtime())
     for i in range(args.number):
-        create_grid("grid_{}".format(i))
+        create_grid(prefix + "_grid_{}".format(i))
 
     print("Ok, {} grids created".format(args.number))
