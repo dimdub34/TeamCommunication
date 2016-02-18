@@ -24,15 +24,14 @@ def get_text_explanation():
     return txt
 
 
-# ECRAN RECAPITULATIF ==========================================================
-def get_text_recapitulatif(period_content):
+def get_text_summary(period_content):
     txt = trans_TC(u"You've found {}.<br />Your group have found a total of "
               u"{}.<br />Each group member earns {}.").format(
         get_pluriel(period_content.get("TC_goodanswers"),
                     trans_TC(u"good answer")),
         get_pluriel(period_content.get("TC_goodanswers_group"),
                     trans_TC(u"good answer")),
-        get_pluriel(period_content.get("TC_periodpayoff"), u"ecu"))
+        get_pluriel(period_content.get("TC_periodpayoff"), pms.MONNAIE))
     return txt
 
 

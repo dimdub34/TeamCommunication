@@ -113,7 +113,7 @@ class RemoteTC(IRemote):
             return defered
 
     def remote_display_summary(self, period_content):
-        txt = texts_TC.get_text_recapitulatif(period_content)
+        txt = texts_TC.get_text_summary(period_content)
         return self._le2mclt.get_remote("base").remote_display_information(txt)
 
     def remote_set_payoffs_TC(self, sequence, in_euros, in_ecus=None):
