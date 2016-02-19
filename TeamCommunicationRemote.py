@@ -118,14 +118,16 @@ class RemoteTC(IRemote):
             remote_display_information(txt, html=True)
 
     def remote_set_payoffs_TC(self, sequence, in_euros, in_ecus=None):
+        logger.info(u"{} set_payoffs_TC".format(self.le2mclt.uid))
         self.remote_set_payoffs(in_euros, in_ecus)
-        self._payoff_text = texts_TC.get_payoff_text(
-            self._payoff_euros, self._payoff_ecus)
+        self.payoff_text = texts_TC.get_payoff_text(
+            self.payoff_euros, self.payoff_ecus)
         self._payoffs[sequence] = {
             "euro": self.payoff_euros, "ecu": self.payoff_ecus,
             "txt": self.payoff_text}
 
     def remote_display_payoffs_TC(self, sequence):
+        logger.info(u"{} display_payoffs_TC".format(self.le2mclt.uid))
         return self.le2mclt.get_remote("base").remote_display_information(
             self._payoffs[sequence]["txt"])
 

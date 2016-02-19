@@ -290,12 +290,12 @@ class DGains(GuiPayoffs):
             "TeamCommunication")
         self._gains = {}
         for j in self._players:
-            self._gains[j] = j.sequences[sequence]["gain_euros"]
-        gains_txt = [[str(k.joueur), u"{:.2f}".format(v)] for k, v in
+            self._gains[j.joueur] = j.sequences[sequence]["gain_euros"]
+        gains_txt = [[str(k), u"{:.2f}".format(v)] for k, v in
                      sorted(self._gains.viewitems())]
 
         GuiPayoffs.__init__(self, le2mserver, "TeamCommunication", gains_txt)
-        self.ui.pushButton_afficher.clicked.disconnect(self._display_onremotes)
+        self.ui.pushButton_afficher.clicked.disconnect()
         self.ui.pushButton_afficher.clicked.connect(
             lambda _: self._display_onremotes2())
 
@@ -312,7 +312,7 @@ class DGains(GuiPayoffs):
     def _addto_finalpayoffs(self):
         if not self._gains:
             return
-        for k, v in self._gains.iteritems():
+        for k, v in self._gains.viewitems():
             k.get_part("base").paiementFinal += float(v)
         self._le2mserv.gestionnaire_base.enregistrer()
         self._le2mserv.gestionnaire_graphique.infoserv(
