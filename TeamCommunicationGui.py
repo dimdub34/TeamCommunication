@@ -1,15 +1,13 @@
 # -*- coding: utf-8 -*-
-"""
-Ce module contient les boites de dialogue du programme.
-"""
 
+from PyQt4 import QtGui, QtCore
 import logging
 import random
 import datetime
 import pickle
-from PyQt4 import QtGui, QtCore
+from util.utili18n import le2mtrans
 from client.cltgui.cltguiwidgets import WExplication, WCompterebours, WChat, \
-    WSpinbox, WSlider
+    WSpinbox, WSlider, WCombo, WLabel
 import TeamCommunicationParams as pms
 import TeamCommunicationTexts as texts_TC
 from TeamCommunicationGuiSrc import TeamCommunicationConfiguration, \
@@ -19,6 +17,7 @@ from util.utiltools import get_pluriel
 from server.servgui.servguidialogs import GuiPayoffs
 from twisted.internet import defer
 from TeamCommunicationTexts import trans_TC
+from client.cltgui.cltguidialogs import DQuestFinal
 
 logger = logging.getLogger("le2m")
 
@@ -433,3 +432,143 @@ class DQuestionDictator(QtGui.QDialog):
         logger.info(u"Send back {}".format(dec))
         self._defered.callback(dec)
         self.accept()
+
+
+class DQuestFinalTC(DQuestFinal):
+    def __init__(self, defered, automatique, parent):
+        DQuestFinal.__init__(self, defered, automatique, parent)
+
+        residence = [v for k, v in sorted(texts_TC.COUNTRY_RESIDENCE.viewitems())]
+        residence.insert(0, le2mtrans(u"Choose"))
+        residence.append(le2mtrans(u"Not in the list above"))
+        self._residence = WCombo(
+            parent=self, automatique=self._automatique,
+            label=trans_TC(u"Country of residence"), items=residence)
+        self._gridlayout.addWidget(self._residence, 0, 2)
+
+        # language skills
+        skills = [v for k, v in sorted(texts_TC.LANGUAGE_SKILLS.viewitems())]
+        skills.insert(0, le2mtrans(u"Choose"))
+
+        # luxembourgish
+        self._luxembourgish_speak = WCombo(
+            parent=self, automatique=self._automatique,
+            label=u"<strong>" + trans_TC(u"Luxembourgish") + u"</strong>  " +
+                  trans_TC(u"Speak"), items=skills)
+        self._gridlayout.addWidget(self._luxembourgish_speak, 7, 0)
+        self._luxembourgish_understrand = WCombo(
+            parent=self, automatique=self._automatique,
+            label=trans_TC(u"Understand"), items=skills)
+        self._gridlayout.addWidget(self._luxembourgish_understrand, 7, 1)
+        self._luxembourgish_read = WCombo(
+            parent=self, automatique=self._automatique,
+            label=trans_TC(u"Read"), items=skills)
+        self._gridlayout.addWidget(self._luxembourgish_read, 7, 2)
+        self._luxembourgish_write = WCombo(
+            parent=self, automatique=self._automatique,
+            label=trans_TC(u"Write"), items=skills)
+        self._gridlayout.addWidget(self._luxembourgish_write, 7, 3)
+
+        # french
+        self._french_speak = WCombo(
+            parent=self, automatique=self._automatique,
+            label=u"<strong>" + trans_TC(u"French") + u"</strong>  " +
+                  trans_TC(u"Speak"), items=skills)
+        self._gridlayout.addWidget(self._french_speak, 8, 0)
+        self._french_understrand = WCombo(
+            parent=self, automatique=self._automatique,
+            label=trans_TC(u"Understand"), items=skills)
+        self._gridlayout.addWidget(self._french_understrand, 8, 1)
+        self._french_read = WCombo(
+            parent=self, automatique=self._automatique,
+            label=trans_TC(u"Read"), items=skills)
+        self._gridlayout.addWidget(self._french_read, 8, 2)
+        self._french_write = WCombo(
+            parent=self, automatique=self._automatique,
+            label=trans_TC(u"Write"), items=skills)
+        self._gridlayout.addWidget(self._french_write, 8, 3)
+
+        # german
+        self._german_speak = WCombo(
+            parent=self, automatique=self._automatique,
+            label=u"<strong>" + trans_TC(u"German") + u"</strong>  " +
+                  trans_TC(u"Speak"), items=skills)
+        self._gridlayout.addWidget(self._german_speak, 9, 0)
+        self._german_understrand = WCombo(
+            parent=self, automatique=self._automatique,
+            label=trans_TC(u"Understand"), items=skills)
+        self._gridlayout.addWidget(self._german_understrand, 9, 1)
+        self._german_read = WCombo(
+            parent=self, automatique=self._automatique,
+            label=trans_TC(u"Read"), items=skills)
+        self._gridlayout.addWidget(self._german_read, 9, 2)
+        self._german_write = WCombo(
+            parent=self, automatique=self._automatique,
+            label=trans_TC(u"Write"), items=skills)
+        self._gridlayout.addWidget(self._german_write, 9, 3)
+
+        # english
+        self._english_speak = WCombo(
+            parent=self, automatique=self._automatique,
+            label=u"<strong>" + trans_TC(u"English") + u"</strong>  " +
+                  trans_TC(u"Speak"), items=skills)
+        self._gridlayout.addWidget(self._english_speak, 10, 0)
+        self._english_understrand = WCombo(
+            parent=self, automatique=self._automatique,
+            label=trans_TC(u"Understand"), items=skills)
+        self._gridlayout.addWidget(self._english_understrand, 10, 1)
+        self._english_read = WCombo(
+            parent=self, automatique=self._automatique,
+            label=trans_TC(u"Read"), items=skills)
+        self._gridlayout.addWidget(self._english_read, 10, 2)
+        self._english_write = WCombo(
+            parent=self, automatique=self._automatique,
+            label=trans_TC(u"Write"), items=skills)
+        self._gridlayout.addWidget(self._english_write, 10, 3)
+
+        self.adjustSize()
+        self.setFixedSize(self.size())
+
+    def _accept(self):
+        inputs = self._get_inputs()
+        if inputs:
+
+            try:
+
+                inputs["residence"] = self._residence.get_currentindex()
+                inputs["luxembourgish_speak"] = self._luxembourgish_speak.get_currentindex()
+                inputs["luxembourgish_understand"] = self._luxembourgish_understrand.get_currentindex()
+                inputs["luxembourgish_read"] = self._luxembourgish_read.get_currentindex()
+                inputs["luxembourgish_write"] = self._luxembourgish_write.get_currentindex()
+                inputs["french_speak"] = self._french_speak.get_currentindex()
+                inputs["french_understand"] = self._french_understrand.get_currentindex()
+                inputs["french_read"] = self._french_read.get_currentindex()
+                inputs["french_write"] = self._french_write.get_currentindex()
+                inputs["german_speak"] = self._german_speak.get_currentindex()
+                inputs["german_understand"] = self._german_understrand.get_currentindex()
+                inputs["german_read"] = self._german_read.get_currentindex()
+                inputs["german_write"] = self._german_write.get_currentindex()
+                inputs["english_speak"] = self._english_speak.get_currentindex()
+                inputs["english_understand"] = self._english_understrand.get_currentindex()
+                inputs["english_read"] = self._english_read.get_currentindex()
+                inputs["english_write"] = self._english_write.get_currentindex()
+
+            except ValueError:
+                return QtGui.QMessageBox.warning(
+                    self, le2mtrans(u"Warning"),
+                    le2mtrans(u"You must answer to all the questions"))
+
+            if not self._automatique:
+                confirm = QtGui.QMessageBox.question(
+                    self, le2mtrans(u"Confirmation"),
+                    le2mtrans(u"Do you confirm your answers?"),
+                    QtGui.QMessageBox.No | QtGui.QMessageBox.Yes)
+                if confirm != QtGui.QMessageBox.Yes:
+                    return
+
+            logger.info(u"Send back: {}".format(inputs))
+            self.accept()
+            self._defered.callback(inputs)
+
+        else:
+            return

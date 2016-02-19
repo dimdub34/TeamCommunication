@@ -11,6 +11,7 @@ from time import strftime
 from parts.Dictator import DictatorParams
 from server.servgest import servgestgroups
 from TeamCommunicationTexts import trans_TC
+from util.utili18n import le2mtrans
 
 logger = logging.getLogger("le2m.{}".format(__name__))
 
@@ -46,6 +47,12 @@ class Serveur(object):
             self._onglet_essais, trans_TC(u"Tries"))
         self._le2mserv.gestionnaire_graphique.screen.ui.onglets.addTab(
             self._onglet_messages, trans_TC(u"Messages"))
+
+        # final question
+        self._le2mserv.gestionnaire_graphique.screen.action_finalquest.\
+            triggered.disconnect()
+        self._le2mserv.gestionnaire_graphique.screen.action_finalquest.\
+            triggered.connect(lambda _: self._display_questfinal())
 
         self._currentsequence = -1
 
@@ -244,3 +251,33 @@ class Serveur(object):
         yield (self._le2mserv.gestionnaire_experience.run_step(
             step_name=u"Question après Dictator", step_participants=self._tous,
             step_function="display_questionapresdictator"))
+
+
+    @defer.inlineCallbacks
+    def _display_questfinal(self):
+        if not self._le2mserv.gestionnaire_base.is_created():
+            QtGui.QMessageBox.warning(
+                self._le2mserv.gestionnaire_graphique.screen,
+                le2mtrans(u"Warning"),
+                le2mtrans(u"There is no database yet. You first need to "
+                          u"load at least one part."))
+            return
+        if not hasattr(self, "_tous"):
+            QtGui.QMessageBox.warning(
+                self._le2mserv.gestionnaire_graphique.screen,
+                le2mtrans(u"Warning"),
+                trans_TC(u"TeamCommunication has to be run before to "
+                         u"start this questionnaire"))
+            return
+
+        confirmation = QtGui.QMessageBox.question(
+            self._le2mserv.gestionnaire_graphique.screen,
+            le2mtrans(u"Confirmation"),
+            le2mtrans(u"Start the final questionnaire?"),
+            QtGui.QMessageBox.Cancel | QtGui.QMessageBox.Ok)
+        if confirmation != QtGui.QMessageBox.Ok:
+            return
+
+        yield (self._le2mserv.gestionnaire_experience.run_step(
+            trans_TC(u"Final questionnaire"), self._tous,
+            "display_questfinal"))

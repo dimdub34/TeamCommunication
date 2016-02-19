@@ -13,6 +13,21 @@ trans_TC = gettext.translation(
   "TeamCommunication", localedir, languages=[params.getp("LANG")]).ugettext
 
 
+COUNTRY_RESIDENCE = {
+    1: trans_TC(u"Germany"),
+    2: trans_TC(u"Belgium"),
+    3: trans_TC(u"France"),
+    4: trans_TC(u"Luxembourg")
+}
+
+LANGUAGE_SKILLS = {
+    1: trans_TC(u"No difficulty"),
+    2: trans_TC(u"Some difficulty"),
+    3: trans_TC(u"Considerable difficulty"),
+    4: trans_TC(u"No notion")
+}
+
+
 def get_text_explanation():
     txt = trans_TC(u"To display a grid, click on its number.")
     txt += trans_TC(u"<br />To indicate the number of '1' included in the grid, "

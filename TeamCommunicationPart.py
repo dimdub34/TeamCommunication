@@ -251,6 +251,17 @@ class PartieTC(Partie, pb.Referenceable):
         self.joueur.remove_waitmode()
         self.joueur.info(u"{}".format(self.currentperiod.TC_croyancedictator))
 
+    @defer.inlineCallbacks
+    def display_questfinal(self):
+        logger.debug(u"{} display_questfinal".format(self.joueur))
+        inputs = yield (self.remote.callRemote("display_questfinal"))
+        part_questfinal = self.joueur.get_part("questionnaireFinal")
+        for k, v in inputs.viewitems():
+            setattr(part_questfinal, k, v)
+            setattr(self.currentperiod, "TC_{}".format(k), v)
+        self.joueur.info('ok')
+        self.joueur.remove_waitmode()
+
 
 class RepetitionsTC(Base):
     __tablename__ = 'partie_TeamCommunication_repetitions'
@@ -376,6 +387,24 @@ class RepetitionsTC(Base):
     TC_jobsatisfaction = Column(Integer)
     TC_cumulativepayoff = Column(Float)
     TC_croyancedictator = Column(Integer)
+    TC_residence = Column(Integer)
+    TC_luxembourgish_speak = Column(Integer)
+    TC_luxembourgish_understand = Column(Integer)
+    TC_luxembourgish_read = Column(Integer)
+    TC_luxembourgish_write = Column(Integer)
+    TC_french_speak = Column(Integer)
+    TC_french_understand = Column(Integer)
+    TC_french_read = Column(Integer)
+    TC_french_write = Column(Integer)
+    TC_german_speak = Column(Integer)
+    TC_german_understand = Column(Integer)
+    TC_german_read = Column(Integer)
+    TC_german_write = Column(Integer)
+    TC_english_speak = Column(Integer)
+    TC_english_understand = Column(Integer)
+    TC_english_read = Column(Integer)
+    TC_english_write = Column(Integer)
+
 
     def __init__(self, sequence, period):
         self.TC_sequence = sequence
