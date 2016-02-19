@@ -15,12 +15,13 @@ trans_TC = gettext.translation(
 
 def get_text_explanation():
     txt = trans_TC(u"To display a grid, click on its number.")
-    txt += trans_TC(u"\nTo indicate the number of '1' included in the grid, enter "
-               u"this number directly in the box under its number")
+    txt += trans_TC(u"<br />To indicate the number of '1' included in the grid, "
+                    u"enter this number directly in the box under its number")
+
     if pms.TREATMENT == pms.get_treatment("avec_communication"):
-        txt += trans_TC(u"The chat window allows you to communicate freely for {} "
-                   u"minutes with other group players.".format(
-                        pms.TEMPS_PARTIE.minute))
+        txt += trans_TC(u"<br />The chat window allows you to communicate "
+                        u"freely for {} minutes with other group "
+                        u"players.").format(pms.TEMPS_PARTIE.minute)
     return txt
 
 
