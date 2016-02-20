@@ -192,8 +192,8 @@ class Serveur(object):
                 trans_TC(u"Summary"), self._tous, "display_summary"))
         
         # End of part ==========================================================
-        self._le2mserv.gestionnaire_experience.finalize_part(
-            "TeamCommunication")
+        yield (self._le2mserv.gestionnaire_experience.finalize_part(
+            "TeamCommunication"))
 
     def _display_payoffs(self):
         if self._currentsequence >= 0:
