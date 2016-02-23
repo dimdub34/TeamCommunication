@@ -35,6 +35,9 @@ def _get_html(numero, grille):
 
 
 class WCell(QtGui.QWidget):
+
+    edit_end = QtCore.pyqtSignal()
+
     def __init__(self, numero, displayer, tcremote):
         super(WCell, self).__init__()
         self.ui = TeamCommunicationCellule.Ui_Form()
@@ -154,6 +157,7 @@ class GuiDecision(QtGui.QDialog):
         hlayout.addSpacerItem(QtGui.QSpacerItem(
             20, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Expanding))
         self.widchat = WChat(parent=self, action_send=self._send_message)
+        self.widchat.setStyleSheet("border: 1px solid gray;")
         hlayout.addWidget(self.widchat)
         layout.addLayout(hlayout)
 
@@ -437,6 +441,13 @@ class DQuestionDictator(QtGui.QDialog):
 class DQuestFinalTC(DQuestFinal):
     def __init__(self, defered, automatique, parent):
         DQuestFinal.__init__(self, defered, automatique, parent)
+
+        self._religion_place.setVisible(False)
+        self._religion_place.ui.comboBox.setCurrentIndex(1)
+        self._religion_name.setVisible(False)
+        self._religion_name.ui.comboBox.setCurrentIndex(1)
+        self._religion_belief.setVisible(False)
+        self._religion_belief.ui.comboBox.setCurrentIndex(1)
 
         residence = [v for k, v in sorted(texts_TC.COUNTRY_RESIDENCE.viewitems())]
         residence.insert(0, le2mtrans(u"Choose"))

@@ -35,8 +35,8 @@ def get_text_explanation():
 
     if pms.TREATMENT == pms.get_treatment("avec_communication"):
         txt += trans_TC(u"<br />The chat window allows you to communicate "
-                        u"freely for {} minutes with other group "
-                        u"players.").format(pms.TEMPS_PARTIE.minute)
+                        u"freely with other group players.").format(
+            pms.TEMPS_PARTIE.minute)
     return txt
 
 

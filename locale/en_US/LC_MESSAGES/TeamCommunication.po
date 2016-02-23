@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TC\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-19 17:24+0100\n"
-"PO-Revision-Date: 2016-02-19 17:25+0100\n"
+"POT-Creation-Date: 2016-02-23 10:46+0100\n"
+"PO-Revision-Date: 2016-02-23 10:47+0100\n"
 "Last-Translator: Dimitri DUBOIS <dimitri.dubois@umontpellier.fr>\n"
 "Language-Team: Dimitri DUBOIS <dimitri.dubois@umontpellier.fr>\n"
 "Language: en_US\n"
@@ -82,7 +82,7 @@ msgid "Start TeamCommunication?"
 msgstr ""
 
 #: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationServ.py:187
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:361
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:365
 msgid "Additionnal questions"
 msgstr ""
 
@@ -110,81 +110,81 @@ msgstr ""
 msgid "Grid"
 msgstr ""
 
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:119
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:122
 msgid ""
 "Click on a number\n"
 "to see the corresponding grid"
 msgstr ""
 
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:213
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:217
 msgid "You:"
 msgstr ""
 
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:305
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:309
 msgid "Display payoff on remotes' screen?"
 msgstr ""
 
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:319
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:323
 msgid "TC payoffs added to final payoffs"
 msgstr ""
 
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:379
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:383
 msgid "Do you confirm your answers?"
 msgstr ""
 
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:412
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:416
 msgid "Prediction"
 msgstr ""
 
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:427
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:431
 msgid "Do you confirm your choice?"
 msgstr ""
 
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:446
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:457
 msgid "Country of residence"
 msgstr ""
 
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:456
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:467
 msgid "Luxembourgish"
 msgstr ""
 
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:457
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:476
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:495
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:514
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:468
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:487
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:506
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:525
 msgid "Speak"
 msgstr ""
 
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:461
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:480
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:499
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:518
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:472
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:491
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:510
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:529
 msgid "Understand"
 msgstr ""
 
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:465
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:484
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:503
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:522
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:476
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:495
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:514
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:533
 msgid "Read"
 msgstr ""
 
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:469
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:488
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:507
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:526
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:480
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:499
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:518
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:537
 msgid "Write"
 msgstr ""
 
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:475
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:486
 msgid "French"
 msgstr ""
 
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:494
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:505
 msgid "German"
 msgstr ""
 
-#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:513
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:524
 msgid "English"
 msgstr ""
 
@@ -232,8 +232,8 @@ msgstr ""
 
 #: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationTexts.py:37
 msgid ""
-"<br />The chat window allows you to communicate freely for {} minutes with "
-"other group players."
+"<br />The chat window allows you to communicate freely with other group "
+"players."
 msgstr ""
 
 #: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationTexts.py:44
