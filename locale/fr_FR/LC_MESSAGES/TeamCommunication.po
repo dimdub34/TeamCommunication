@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TC\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-23 12:41+0100\n"
-"PO-Revision-Date: 2016-02-23 14:47+0100\n"
+"POT-Creation-Date: 2016-02-23 22:23+0100\n"
+"PO-Revision-Date: 2016-02-23 22:24+0100\n"
 "Last-Translator: Dimitri DUBOIS <dimitri.dubois@umontpellier.fr>\n"
 "Language-Team: Dimitri DUBOIS <dimitri.dubois@umontpellier.fr>\n"
 "Language: fr_FR\n"
@@ -105,6 +105,10 @@ msgstr "Il faut lancer TeamCommunication avant de démarrer ce questionnaire"
 #: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationServ.py:282
 msgid "Final questionnaire"
 msgstr "Questionnaire final"
+
+#: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationPart.py:175
+msgid "Player"
+msgstr "Joueur"
 
 #: /home/irtimid/Documents/travail/programmes/le2m-v2.1/le2m/parts/TeamCommunication/TeamCommunicationGui.py:26
 msgid "Grid"

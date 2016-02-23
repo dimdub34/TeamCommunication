@@ -10,9 +10,10 @@ from sqlalchemy import Column, Integer, Float, ForeignKey, DateTime, String
 from server.servbase import Base
 from server.servparties import Partie
 import TeamCommunicationParams as pms
-import TeamCommunicationTexts as texts
+import TeamCommunicationTexts as texts_TC
 import util.utiltwisted as twu
 from util.utiltools import get_module_attributes
+from string import letters
 
 
 logger = logging.getLogger("le2m")
@@ -161,15 +162,18 @@ class PartieTC(Partie, pb.Referenceable):
         self.events.append(EventsTC(
             self._currentsequence, self.currentperiod.TC_period,
             pms.EVENT_MESSAGE, message=message, messagetype=pms.MSG_ENVOYE))
-        yield (twu.forAll(self.othergroupmembers, "display_message", message))
+        yield (twu.forAll(self.othergroupmembers, "display_message", self,
+                          message))
 
     @defer.inlineCallbacks
-    def display_message(self, message):
+    def display_message(self, sender, message):
         logger.debug(u"{} display_message {}".format(self.joueur, message))
         self.events.append(EventsTC(
             self._currentsequence, self.currentperiod.TC_period,
             pms.EVENT_MESSAGE, message=message, messagetype=pms.MSG_RECU))
-        yield (self.remote.callRemote("display_message", message))
+        sender_id = letters[27 + self.othergroupmembers.index(sender)]
+        msg = texts_TC.trans_TC(u"Player") + u" " + sender_id + u": " + message
+        yield (self.remote.callRemote("display_message", msg))
 
     def compute_periodpayoff(self):
         """
