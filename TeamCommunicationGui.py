@@ -541,6 +541,10 @@ class DQuestFinalTC(DQuestFinal):
         self.setFixedSize(self.size())
 
     def _accept(self):
+        try:
+            self._timer_automatique.stop()
+        except AttributeError:
+            pass
         inputs = self._get_inputs()
         if inputs:
 
