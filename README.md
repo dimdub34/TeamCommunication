@@ -40,4 +40,5 @@ Si c'est une séquence de TeamCommunication, cliquer sur "Afficher les gains" et
 
 Si c'est le Dictateur qui est rémunéré il faut alors cliquer sur le sous-menu "Afficher les gains" du menu Dictator. La procédure est ensuite la même que celle décrite dans le paragraphe au-dessus.  
 
-S'il y a plusieurs séquences ou parties à rémunérer il faut alors afficher les gains de ces séquences parties et ajouter les gains aux gains finaux, ils s'additionnent. Une fois effectué cliquer sur le sous-menu "Gains" du menu Expérience. Les gains cumulés des séquences/parties sont affichés. Les imprimer puis rémunérer les sujets.
+S'il y a plusieurs séquences ou parties à rémunérer il faut alors afficher les gains de ces séquences parties et ajouter les gains aux gains finaux, ils s'additionnent. Une fois effectué cliquer sur le sous-menu "Gains" du menu Expérience. Les gains cumulés des séquences/parties sont affichés. Les imprimer pour rémunérer les sujets. Cliquer sur "Afficher sur les postes" pour faire afficher l'écran final. Cet écran 
+rappelle au sujet son gain pour l'expérience et lui laisse une zone pour écrire des commentaires.
