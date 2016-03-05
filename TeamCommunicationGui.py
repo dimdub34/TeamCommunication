@@ -137,7 +137,7 @@ class GuiDecision(QtGui.QDialog):
         layout = QtGui.QVBoxLayout(self)
 
         self._widexplication = WExplication(
-            text=texts_TC.get_text_explanation(), parent=self, size=(600, 50))
+            text=texts_TC.get_text_explanation(), parent=self, size=(650, 80))
         layout.addWidget(self._widexplication)
 
         self._widcompterebours = WCompterebours(
