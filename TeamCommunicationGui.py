@@ -537,6 +537,8 @@ class DQuestFinalTC(DQuestFinal):
             label=trans_TC(u"Write"), items=skills)
         self._gridlayout.addWidget(self._english_write, 10, 3)
 
+        self.setMinimumSize(0, 0)
+        self.setMaximumSize(16777215, 16777215)
         self.adjustSize()
         self.setFixedSize(self.size())
 
