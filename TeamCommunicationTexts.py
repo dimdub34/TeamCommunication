@@ -4,13 +4,16 @@ This module contains the texts for the screens
 """
 from util.utiltools import get_pluriel
 import TeamCommunicationParams as pms
-
 import os
 import configuration.configparam as params
 import gettext
+from util.utili18n import le2mtrans
+
+
 localedir = os.path.join(params.getp("PARTSDIR"), "TeamCommunication", "locale")
 trans_TC = gettext.translation(
   "TeamCommunication", localedir, languages=[params.getp("LANG")]).ugettext
+
 
 
 COUNTRY_RESIDENCE = {
@@ -25,6 +28,36 @@ LANGUAGE_SKILLS = {
     2: trans_TC(u"Some difficulty"),
     3: trans_TC(u"Considerable difficulty"),
     4: trans_TC(u"No notion")
+}
+
+DISCIPLINES = {
+    1: u'AES',
+    2: le2mtrans(u'Archeology'),
+    3: le2mtrans(u'Biology'),
+    4: le2mtrans(u'Chemistry'),
+    5: le2mtrans(u'Law'),
+    6: u'Ecole de commerce',
+    7: u"Ecole d'infirmière",
+    8: u"Ecole d'ingénieur",
+    9: le2mtrans(u'Economics'),
+    10: le2mtrans(u'Geography'),
+    11: le2mtrans(u'History'),
+    12: le2mtrans(u'Informatics'),
+    13: u'IAE',
+    14: u'IPAG',
+    15: u'ISEM',
+    16: le2mtrans(u'Letters'),
+    17: le2mtrans(u'Mathematics'),
+    18: le2mtrans(u'Medicine'),
+    19: le2mtrans(u'Music'),
+    20: le2mtrans(u'Pharmacy'),
+    21: le2mtrans(u'Philosophy'),
+    22: le2mtrans(u'Physics'),
+    23: le2mtrans(u'Political Science'),
+    24: le2mtrans(u"Educational Sciences"),
+    25: le2mtrans(u'Sociology'),
+    26: le2mtrans(u'Sport'),
+    27: u'SupAgro'
 }
 
 

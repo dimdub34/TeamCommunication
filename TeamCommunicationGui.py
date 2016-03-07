@@ -442,6 +442,12 @@ class DQuestFinalTC(DQuestFinal):
     def __init__(self, defered, automatique, parent):
         DQuestFinal.__init__(self, defered, automatique, parent)
 
+        disciplines = [v for k, v in sorted(texts_TC.DISCIPLINES.viewitems())]
+        disciplines.insert(0, le2mtrans(u"Choose"))
+        disciplines.append(le2mtrans(u"Not in the list above"))
+        self._study_topic.ui.comboBox.clear()
+        self._study_topic.ui.comboBox.addItems(disciplines)
+
         self._religion_place.setVisible(False)
         self._religion_place.ui.comboBox.setCurrentIndex(1)
         self._religion_name.setVisible(False)
@@ -456,6 +462,15 @@ class DQuestFinalTC(DQuestFinal):
             parent=self, automatique=self._automatique,
             label=trans_TC(u"Country of residence"), items=residence)
         self._gridlayout.addWidget(self._residence, 0, 2)
+
+        # profession
+        professions = [v for k, v in sorted(texts_TC.PROFESSIONS.viewitems())]
+        professions.insert(0, le2mtrans(u"Choose"))
+        professions.append(le2mtrans(u"Not in the list above"))
+        self._profession = WCombo(
+            label=trans_TC(u"Your profession"), parent=self,
+            automatique=self._automatique, items=professions)
+        self._gridlayout.addWidget(self._profession, 2, 3)
 
         # language skills
         skills = [v for k, v in sorted(texts_TC.LANGUAGE_SKILLS.viewitems())]
