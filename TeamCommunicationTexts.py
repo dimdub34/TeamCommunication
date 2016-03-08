@@ -15,7 +15,6 @@ trans_TC = gettext.translation(
   "TeamCommunication", localedir, languages=[params.getp("LANG")]).ugettext
 
 
-
 COUNTRY_RESIDENCE = {
     1: trans_TC(u"Germany"),
     2: trans_TC(u"Belgium"),
@@ -31,33 +30,26 @@ LANGUAGE_SKILLS = {
 }
 
 DISCIPLINES = {
-    1: u'AES',
-    2: le2mtrans(u'Archeology'),
-    3: le2mtrans(u'Biology'),
-    4: le2mtrans(u'Chemistry'),
-    5: le2mtrans(u'Law'),
-    6: u'Ecole de commerce',
-    7: u"Ecole d'infirmière",
-    8: u"Ecole d'ingénieur",
-    9: le2mtrans(u'Economics'),
-    10: le2mtrans(u'Geography'),
-    11: le2mtrans(u'History'),
-    12: le2mtrans(u'Informatics'),
-    13: u'IAE',
-    14: u'IPAG',
-    15: u'ISEM',
-    16: le2mtrans(u'Letters'),
-    17: le2mtrans(u'Mathematics'),
-    18: le2mtrans(u'Medicine'),
-    19: le2mtrans(u'Music'),
-    20: le2mtrans(u'Pharmacy'),
-    21: le2mtrans(u'Philosophy'),
-    22: le2mtrans(u'Physics'),
-    23: le2mtrans(u'Political Science'),
-    24: le2mtrans(u"Educational Sciences"),
-    25: le2mtrans(u'Sociology'),
-    26: le2mtrans(u'Sport'),
-    27: u'SupAgro'
+    1: le2mtrans(u'Archeology'),
+    2: le2mtrans(u'Biology'),
+    3: le2mtrans(u'Chemistry'),
+    4: le2mtrans(u'Law'),
+    5: le2mtrans(u'Economics'),
+    6: le2mtrans(u'Geography'),
+    7: trans_TC(u"Gerontology"),
+    8: le2mtrans(u'History'),
+    9: trans_TC(u"Management"),
+    10: trans_TC(u"Information and communication"),
+    11: le2mtrans(u'Informatics'),
+    12: le2mtrans(u'Letters'),
+    13: le2mtrans(u'Medicine'),
+    14: le2mtrans(u'Music'),
+    15: le2mtrans(u'Pharmacy'),
+    16: le2mtrans(u'Philosophy'),
+    17: trans_TC(u"Psychology"),
+    18: le2mtrans(u"Educational Sciences"),
+    19: le2mtrans(u'Political Science'),
+    20: le2mtrans(u'Sociology'),
 }
 
 PROFESSIONS = {

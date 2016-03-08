@@ -160,7 +160,25 @@ class RemoteTC(IRemote):
             inputs['religion_place'] = random.randint(1, 4)
             inputs['religion_croyance'] = random.randint(1, 4)
             inputs['religion_nom'] = random.randint(1, 6)
-            # todo: add answers to Ludivine's questions
+            # Ludivine's questions
+            inputs["residence"] = random.randint(1, 4)
+            inputs["luxembourgish_speak"] = random.randint(1, 4)
+            inputs["luxembourgish_understand"] = random.randint(1, 4)
+            inputs["luxembourgish_read"] = random.randint(1, 4)
+            inputs["luxembourgish_write"] = random.randint(1, 4)
+            inputs["french_speak"] = random.randint(1, 4)
+            inputs["french_understand"] = random.randint(1, 4)
+            inputs["french_read"] = random.randint(1, 4)
+            inputs["french_write"] = random.randint(1, 4)
+            inputs["german_speak"] = random.randint(1, 4)
+            inputs["german_understand"] = random.randint(1, 4)
+            inputs["german_read"] = random.randint(1, 4)
+            inputs["german_write"] = random.randint(1, 4)
+            inputs["english_speak"] = random.randint(1, 4)
+            inputs["english_understand"] = random.randint(1, 4)
+            inputs["english_read"] = random.randint(1, 4)
+            inputs["english_write"] = random.randint(1, 4)
+            inputs["profession"] = random.randint(1, 8)
             logger.info(u"Renvoi: {}".format(inputs))
             return inputs
 

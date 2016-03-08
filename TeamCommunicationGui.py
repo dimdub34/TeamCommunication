@@ -471,6 +471,10 @@ class DQuestFinalTC(DQuestFinal):
             label=trans_TC(u"Your profession"), parent=self,
             automatique=self._automatique, items=professions)
         self._gridlayout.addWidget(self._profession, 2, 3)
+        self._profession.setEnabled(False)
+        self._study.ui.radioButton_1.toggled.connect(
+            lambda _: self._enable_widgets(self._study.get_checkedbutton()==1,
+                                           self._profession))
 
         # language skills
         skills = [v for k, v in sorted(texts_TC.LANGUAGE_SKILLS.viewitems())]
@@ -584,6 +588,7 @@ class DQuestFinalTC(DQuestFinal):
                 inputs["english_understand"] = self._english_understrand.get_currentindex()
                 inputs["english_read"] = self._english_read.get_currentindex()
                 inputs["english_write"] = self._english_write.get_currentindex()
+                inputs["profession"] = self._profession.get_currentindex()
 
             except ValueError:
                 return QtGui.QMessageBox.warning(

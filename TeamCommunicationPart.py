@@ -408,6 +408,7 @@ class RepetitionsTC(Base):
     TC_english_understand = Column(Integer)
     TC_english_read = Column(Integer)
     TC_english_write = Column(Integer)
+    TC_profession = Column(Integer)
 
 
     def __init__(self, sequence, period):
