@@ -60,7 +60,16 @@ DISCIPLINES = {
     27: u'SupAgro'
 }
 
-
+PROFESSIONS = {
+    1: trans_TC(u"Apprentice"),
+    2: trans_TC(u"Male / Housewife"),
+    3: trans_TC(u"Postdoc"),
+    4: trans_TC(u"Retirement"),
+    5: trans_TC(u"Employee (Private)"),
+    6: trans_TC(u"Employee (Public)"),
+    7: trans_TC(u"Unemployed"),
+    8: trans_TC(u"Self employed")
+}
 def get_text_explanation():
     txt = trans_TC(u"To display a grid, click on its number.")
     txt += trans_TC(u"<br />To indicate the number of '1' included in the grid, "
