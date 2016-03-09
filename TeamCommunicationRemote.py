@@ -142,7 +142,7 @@ class RemoteTC(IRemote):
             inputs['nationalite'] = random.randint(1, 100)
             inputs['couple'] = random.randint(0, 1)
             inputs['etudiant'] = random.randint(0, 1)
-            if inputs['etudiant']:
+            if inputs['etudiant'] == 0:
                 inputs['etudiant_discipline'] = random.randint(1, 10)
                 inputs['etudiant_niveau'] = random.randint(1, 6)
             inputs['experiences'] = random.randint(0, 1)
@@ -153,7 +153,7 @@ class RemoteTC(IRemote):
             else: inputs["fratrie_rang"] = 0
             # sportivité
             inputs["sportif"] = random.randint(0, 1)
-            if inputs["sportif"]:
+            if inputs["sportif"] == 0:
                 inputs["sportif_type"] = random.randint(0, 1)
                 inputs["sportif_competition"] = random.randint(0, 1)
             # religiosité
@@ -178,7 +178,8 @@ class RemoteTC(IRemote):
             inputs["english_understand"] = random.randint(1, 4)
             inputs["english_read"] = random.randint(1, 4)
             inputs["english_write"] = random.randint(1, 4)
-            inputs["profession"] = random.randint(1, 8)
+            if inputs["etudiant"] == 1:  # not student
+                inputs["profession"] = random.randint(1, 8)
             logger.info(u"Renvoi: {}".format(inputs))
             return inputs
 

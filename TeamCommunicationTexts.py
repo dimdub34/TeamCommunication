@@ -62,6 +62,18 @@ PROFESSIONS = {
     7: trans_TC(u"Unemployed"),
     8: trans_TC(u"Self employed")
 }
+
+
+ETUDES_ANNEES = {
+    1: trans_TC(u'Bachelor') + u' 1',
+    2: trans_TC(u'Bachelor') + u' 2',
+    3: trans_TC(u'Bachelor') + u' 3',
+    4: trans_TC(u'Master') + u' 1',
+    5: trans_TC(u'Master') + u' 2',
+    6: trans_TC(u'PhD'),
+}
+
+
 def get_text_explanation():
     txt = trans_TC(u"To display a grid, click on its number.")
     txt += trans_TC(u"<br />To indicate the number of '1' included in the grid, "

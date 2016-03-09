@@ -448,6 +448,12 @@ class DQuestFinalTC(DQuestFinal):
         self._study_topic.ui.comboBox.clear()
         self._study_topic.ui.comboBox.addItems(disciplines)
 
+        niveaux = [v for k, v in sorted(texts_TC.ETUDES_ANNEES.viewitems())]
+        niveaux.insert(0, le2mtrans(u"Choose"))
+        niveaux.append(le2mtrans(u"Not in the list above"))
+        self._study_level.ui.comboBox.clear()
+        self._study_level.ui.comboBox.addItems(niveaux)
+
         self._religion_place.setVisible(False)
         self._religion_place.ui.comboBox.setCurrentIndex(1)
         self._religion_name.setVisible(False)
@@ -588,7 +594,8 @@ class DQuestFinalTC(DQuestFinal):
                 inputs["english_understand"] = self._english_understrand.get_currentindex()
                 inputs["english_read"] = self._english_read.get_currentindex()
                 inputs["english_write"] = self._english_write.get_currentindex()
-                inputs["profession"] = self._profession.get_currentindex()
+                if inputs["etudiant"] == 1:  # not student
+                    inputs["profession"] = self._profession.get_currentindex()
 
             except ValueError:
                 return QtGui.QMessageBox.warning(
